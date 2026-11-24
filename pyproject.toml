@@ -1,0 +1,12 @@
+[project]
+name = "baby-blade"
+version = "2.0.0"
+description = "AI-powered spinning-top battle game: real-time physics, Minimax and MCTS agents, Mamdani fuzzy danger."
+requires-python = ">=3.11"
+dependencies = ["pygame-ce>=2.5.0,<2.6.0"]
+
+[project.optional-dependencies]
+dev = ["pytest>=8.0", "pygbag>=0.9"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

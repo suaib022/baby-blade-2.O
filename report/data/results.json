@@ -1,0 +1,330 @@
+{
+  "head2head_Easy": {
+    "config": {
+      "agent_a": "Ironclad",
+      "agent_b": "Cyclone",
+      "diff_a": "Easy",
+      "diff_b": "Easy",
+      "matches": 24
+    },
+    "matches": 24,
+    "wins_a": 9,
+    "wins_b": 14,
+    "draws": 1,
+    "finishes": {
+      "BURST": 17,
+      "SPIN_OUT": 6,
+      "DRAW": 1
+    },
+    "avg_seconds": 49.17458333333334,
+    "avg_rounds": 16.291666666666668,
+    "think_a_ms": 2.1390416666666665,
+    "think_b_ms": 14.528833333333333
+  },
+  "head2head_Medium": {
+    "config": {
+      "agent_a": "Ironclad",
+      "agent_b": "Cyclone",
+      "diff_a": "Medium",
+      "diff_b": "Medium",
+      "matches": 24
+    },
+    "matches": 24,
+    "wins_a": 19,
+    "wins_b": 3,
+    "draws": 2,
+    "finishes": {
+      "SPIN_OUT": 11,
+      "BURST": 8,
+      "DRAW": 2,
+      "RING_OUT": 1,
+      "POINTS": 2
+    },
+    "avg_seconds": 69.76291666666667,
+    "avg_rounds": 23.083333333333332,
+    "think_a_ms": 3.927958333333333,
+    "think_b_ms": 52.19208333333333
+  },
+  "stadium_CLASSIC": {
+    "config": {
+      "agent_a": "Ironclad",
+      "agent_b": "Cyclone",
+      "diff_a": "Medium",
+      "diff_b": "Medium",
+      "stadium": "CLASSIC",
+      "matches": 18
+    },
+    "matches": 18,
+    "wins_a": 14,
+    "wins_b": 3,
+    "draws": 1,
+    "finishes": {
+      "SPIN_OUT": 7,
+      "BURST": 8,
+      "DRAW": 1,
+      "RING_OUT": 1,
+      "POINTS": 1
+    },
+    "avg_seconds": 68.96111111111111,
+    "avg_rounds": 22.833333333333332,
+    "think_a_ms": 3.2668333333333335,
+    "think_b_ms": 52.198166666666665
+  },
+  "stadium_ICE": {
+    "config": {
+      "agent_a": "Ironclad",
+      "agent_b": "Cyclone",
+      "diff_a": "Medium",
+      "diff_b": "Medium",
+      "stadium": "ICE",
+      "matches": 18
+    },
+    "matches": 18,
+    "wins_a": 13,
+    "wins_b": 4,
+    "draws": 1,
+    "finishes": {
+      "BURST": 8,
+      "POINTS": 1,
+      "SPIN_OUT": 3,
+      "RING_OUT": 5,
+      "DRAW": 1
+    },
+    "avg_seconds": 69.90555555555555,
+    "avg_rounds": 23.22222222222222,
+    "think_a_ms": 1.3732222222222221,
+    "think_b_ms": 50.166444444444444
+  },
+  "stadium_STEEP": {
+    "config": {
+      "agent_a": "Ironclad",
+      "agent_b": "Cyclone",
+      "diff_a": "Medium",
+      "diff_b": "Medium",
+      "stadium": "STEEP",
+      "matches": 18
+    },
+    "matches": 18,
+    "wins_a": 16,
+    "wins_b": 1,
+    "draws": 1,
+    "finishes": {
+      "BURST": 4,
+      "SPIN_OUT": 11,
+      "POINTS": 2,
+      "DRAW": 1
+    },
+    "avg_seconds": 68.16944444444444,
+    "avg_rounds": 22.61111111111111,
+    "think_a_ms": 1.1881111111111111,
+    "think_b_ms": 49.13627777777778
+  },
+  "scaling_Ironclad": {
+    "config": {
+      "agent_a": "Ironclad",
+      "agent_b": "Ironclad",
+      "diff_a": "Easy",
+      "diff_b": "Hard",
+      "matches": 18
+    },
+    "matches": 18,
+    "wins_a": 1,
+    "wins_b": 17,
+    "draws": 0,
+    "finishes": {
+      "RING_OUT": 11,
+      "BURST": 3,
+      "SPIN_OUT": 2,
+      "POINTS": 2
+    },
+    "avg_seconds": 85.84222222222223,
+    "avg_rounds": 28.444444444444443,
+    "think_a_ms": 0.2122222222222222,
+    "think_b_ms": 11.049833333333332
+  },
+  "blade_BALANCED_ATTACKER": {
+    "config": {
+      "agent_a": "Ironclad",
+      "agent_b": "Ironclad",
+      "diff_a": "Medium",
+      "diff_b": "Medium",
+      "blade_a": "BALANCED",
+      "blade_b": "ATTACKER",
+      "matches": 12
+    },
+    "matches": 12,
+    "wins_a": 6,
+    "wins_b": 6,
+    "draws": 0,
+    "finishes": {
+      "BURST": 8,
+      "SPIN_OUT": 4
+    },
+    "avg_seconds": 50.34166666666667,
+    "avg_rounds": 16.666666666666668,
+    "think_a_ms": 1.6615833333333334,
+    "think_b_ms": 1.4974999999999998
+  },
+  "blade_BALANCED_DEFENDER": {
+    "config": {
+      "agent_a": "Ironclad",
+      "agent_b": "Ironclad",
+      "diff_a": "Medium",
+      "diff_b": "Medium",
+      "blade_a": "BALANCED",
+      "blade_b": "DEFENDER",
+      "matches": 12
+    },
+    "matches": 12,
+    "wins_a": 1,
+    "wins_b": 11,
+    "draws": 0,
+    "finishes": {
+      "BURST": 5,
+      "POINTS": 7
+    },
+    "avg_seconds": 102.50416666666666,
+    "avg_rounds": 34.166666666666664,
+    "think_a_ms": 1.5450833333333334,
+    "think_b_ms": 1.4705833333333331
+  },
+  "blade_BALANCED_STAMINA": {
+    "config": {
+      "agent_a": "Ironclad",
+      "agent_b": "Ironclad",
+      "diff_a": "Medium",
+      "diff_b": "Medium",
+      "blade_a": "BALANCED",
+      "blade_b": "STAMINA",
+      "matches": 12
+    },
+    "matches": 12,
+    "wins_a": 6,
+    "wins_b": 5,
+    "draws": 1,
+    "finishes": {
+      "BURST": 11,
+      "DRAW": 1
+    },
+    "avg_seconds": 90.7925,
+    "avg_rounds": 30.25,
+    "think_a_ms": 1.391333333333333,
+    "think_b_ms": 1.8886666666666667
+  },
+  "blade_ATTACKER_DEFENDER": {
+    "config": {
+      "agent_a": "Ironclad",
+      "agent_b": "Ironclad",
+      "diff_a": "Medium",
+      "diff_b": "Medium",
+      "blade_a": "ATTACKER",
+      "blade_b": "DEFENDER",
+      "matches": 12
+    },
+    "matches": 12,
+    "wins_a": 0,
+    "wins_b": 10,
+    "draws": 2,
+    "finishes": {
+      "RING_OUT": 3,
+      "BURST": 7,
+      "DRAW": 2
+    },
+    "avg_seconds": 85.81,
+    "avg_rounds": 28.583333333333332,
+    "think_a_ms": 1.5941666666666665,
+    "think_b_ms": 1.3390833333333332
+  },
+  "blade_ATTACKER_STAMINA": {
+    "config": {
+      "agent_a": "Ironclad",
+      "agent_b": "Ironclad",
+      "diff_a": "Medium",
+      "diff_b": "Medium",
+      "blade_a": "ATTACKER",
+      "blade_b": "STAMINA",
+      "matches": 12
+    },
+    "matches": 12,
+    "wins_a": 5,
+    "wins_b": 0,
+    "draws": 7,
+    "finishes": {
+      "DRAW": 7,
+      "BURST": 5
+    },
+    "avg_seconds": 63.01,
+    "avg_rounds": 21.0,
+    "think_a_ms": 1.24,
+    "think_b_ms": 1.5493333333333332
+  },
+  "blade_DEFENDER_STAMINA": {
+    "config": {
+      "agent_a": "Ironclad",
+      "agent_b": "Ironclad",
+      "diff_a": "Medium",
+      "diff_b": "Medium",
+      "blade_a": "DEFENDER",
+      "blade_b": "STAMINA",
+      "matches": 12
+    },
+    "matches": 12,
+    "wins_a": 10,
+    "wins_b": 2,
+    "draws": 0,
+    "finishes": {
+      "POINTS": 12
+    },
+    "avg_seconds": 120.0,
+    "avg_rounds": 40.0,
+    "think_a_ms": 1.3111666666666666,
+    "think_b_ms": 1.2876666666666667
+  },
+  "head2head_Hard": {
+    "config": {
+      "agent_a": "Ironclad",
+      "agent_b": "Cyclone",
+      "diff_a": "Hard",
+      "diff_b": "Hard",
+      "matches": 24
+    },
+    "matches": 24,
+    "wins_a": 19,
+    "wins_b": 4,
+    "draws": 1,
+    "finishes": {
+      "BURST": 8,
+      "SPIN_OUT": 11,
+      "RING_OUT": 3,
+      "POINTS": 1,
+      "DRAW": 1
+    },
+    "avg_seconds": 79.67875,
+    "avg_rounds": 26.5,
+    "think_a_ms": 9.266291666666666,
+    "think_b_ms": 109.38245833333333
+  },
+  "scaling_Cyclone": {
+    "config": {
+      "agent_a": "Cyclone",
+      "agent_b": "Cyclone",
+      "diff_a": "Easy",
+      "diff_b": "Hard",
+      "matches": 18
+    },
+    "matches": 18,
+    "wins_a": 2,
+    "wins_b": 16,
+    "draws": 0,
+    "finishes": {
+      "BURST": 6,
+      "SPIN_OUT": 6,
+      "RING_OUT": 5,
+      "POINTS": 1
+    },
+    "avg_seconds": 71.15944444444445,
+    "avg_rounds": 23.555555555555557,
+    "think_a_ms": 11.057555555555556,
+    "think_b_ms": 89.60255555555555
+  }
+}
