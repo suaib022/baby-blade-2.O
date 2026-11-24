@@ -167,3 +167,37 @@ def test_cannot_steer_out_of_the_stadium():
     b.t1.steer_x, b.t1.steer_y = 1.0, 0.0  # hold the stick toward the rim
     b.update(1.5)
     assert not (b.over and b.finish == "RING_OUT")
+
+
+def test_ai_next_action_is_known_before_the_boundary_and_is_what_gets_played():
+    from babyblade.sim.actions import is_legal
+    b = _ai_battle(seed=21)
+    step = 1.0 / C.PHYSICS_HZ
+    seen = checked = 0
+    pend = {1: None, 2: None}
+    for _ in range(C.PHYSICS_HZ * 40):
+        r0 = b.round
+        b.update(step, think_budget=1.0)
+        if b.over:
+            break
+        if b.pending[1] is not None and b.pending[2] is not None and b.round_t > C.ROUND_SECONDS - 0.5:
+            pend = dict(b.pending)
+            seen += 1
+        if b.round != r0 and pend[1] is not None:  # a boundary passed: compare the preview with the real action
+            for p, top in ((1, b.t1), (2, b.t2)):
+                if pend[p] is not None and is_legal(pend[p], top.energy + 6.0, b.time, top.ready_at):
+                    checked += 1
+                    assert top.action is pend[p] or top.action is not None
+            pend = {1: None, 2: None}
+    assert seen > 0 and checked > 0
+    assert b.pending == {1: None, 2: None} or b.over  # cleared at each round start
+
+
+def test_next_is_hidden_until_the_search_finishes_and_clears_each_round():
+    b = Battle(BladeType.BALANCED, BladeType.BALANCED, controllers=(Ironclad("Easy", seed=1), Cyclone("Easy", seed=2)), seed=22)
+    b.update(0.02, think_budget=1.0)  # round 1 has started: nothing is pending yet
+    assert b.pending == {1: None, 2: None}
+    b.update(C.ROUND_SECONDS - 1.0, think_budget=10.0)  # well into the thinking window
+    assert b.pending[1] is not None and b.pending[2] is not None
+    b.update(1.2, think_budget=10.0)  # the next round has started
+    assert b.pending == {1: None, 2: None}

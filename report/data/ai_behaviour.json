@@ -1,0 +1,488 @@
+{
+  "Ironclad|Easy|BALANCED|CLASSIC": {
+    "actions": {
+      "CHARGE": 55,
+      "ATTACK": 52,
+      "SPECIAL": 6,
+      "GUARD": 9,
+      "DODGE": 2
+    },
+    "hits": 7.166666666666667,
+    "win_rate": 0.6666666666666666,
+    "n": 6,
+    "finishes": {
+      "SPIN_OUT": 1,
+      "RING_OUT": 1,
+      "BURST": 4
+    },
+    "rounds": 19.833333333333332
+  },
+  "Ironclad|Easy|ATTACKER|CLASSIC": {
+    "actions": {
+      "CHARGE": 39,
+      "ATTACK": 29,
+      "GUARD": 17,
+      "SPECIAL": 4,
+      "DODGE": 1
+    },
+    "hits": 4.5,
+    "win_rate": 0.8333333333333334,
+    "n": 6,
+    "finishes": {
+      "SPIN_OUT": 4,
+      "BURST": 2
+    },
+    "rounds": 14.166666666666666
+  },
+  "Ironclad|Easy|DEFENDER|CLASSIC": {
+    "actions": {
+      "CHARGE": 82,
+      "ATTACK": 67,
+      "SPECIAL": 6,
+      "GUARD": 17,
+      "DODGE": 4
+    },
+    "hits": 10.5,
+    "win_rate": 0.5,
+    "n": 6,
+    "finishes": {
+      "BURST": 3,
+      "POINTS": 1,
+      "RING_OUT": 1,
+      "SPIN_OUT": 1
+    },
+    "rounds": 28.5
+  },
+  "Ironclad|Easy|STAMINA|CLASSIC": {
+    "actions": {
+      "CHARGE": 29,
+      "ATTACK": 35,
+      "GUARD": 13,
+      "SPECIAL": 4
+    },
+    "hits": 6.0,
+    "win_rate": 0.3333333333333333,
+    "n": 6,
+    "finishes": {
+      "BURST": 5,
+      "SPIN_OUT": 1
+    },
+    "rounds": 12.5
+  },
+  "Ironclad|Medium|BALANCED|CLASSIC": {
+    "actions": {
+      "ATTACK": 59,
+      "CHARGE": 52,
+      "GUARD": 19,
+      "SPECIAL": 2
+    },
+    "hits": 7.166666666666667,
+    "win_rate": 0.6666666666666666,
+    "n": 6,
+    "finishes": {
+      "SPIN_OUT": 4,
+      "BURST": 2
+    },
+    "rounds": 21.166666666666668
+  },
+  "Ironclad|Medium|ATTACKER|CLASSIC": {
+    "actions": {
+      "ATTACK": 45,
+      "CHARGE": 34,
+      "GUARD": 11,
+      "SPECIAL": 1
+    },
+    "hits": 6.0,
+    "win_rate": 0.8333333333333334,
+    "n": 6,
+    "finishes": {
+      "SPIN_OUT": 5,
+      "BURST": 1
+    },
+    "rounds": 14.666666666666666
+  },
+  "Ironclad|Medium|DEFENDER|CLASSIC": {
+    "actions": {
+      "ATTACK": 84,
+      "CHARGE": 93,
+      "DODGE": 3,
+      "GUARD": 38,
+      "SPECIAL": 2
+    },
+    "hits": 10.333333333333334,
+    "win_rate": 0.8333333333333334,
+    "n": 6,
+    "finishes": {
+      "POINTS": 3,
+      "BURST": 3
+    },
+    "rounds": 36.166666666666664
+  },
+  "Ironclad|Medium|STAMINA|CLASSIC": {
+    "actions": {
+      "ATTACK": 66,
+      "DODGE": 10,
+      "CHARGE": 43,
+      "GUARD": 23,
+      "SPECIAL": 3
+    },
+    "hits": 9.166666666666666,
+    "win_rate": 0.8333333333333334,
+    "n": 6,
+    "finishes": {
+      "BURST": 4,
+      "SPIN_OUT": 2
+    },
+    "rounds": 23.5
+  },
+  "Ironclad|Hard|BALANCED|CLASSIC": {
+    "actions": {
+      "ATTACK": 56,
+      "CHARGE": 70,
+      "GUARD": 31,
+      "DODGE": 11,
+      "SPECIAL": 1
+    },
+    "hits": 7.0,
+    "win_rate": 0.5,
+    "n": 6,
+    "finishes": {
+      "POINTS": 3,
+      "SPIN_OUT": 2,
+      "BURST": 1
+    },
+    "rounds": 28.0
+  },
+  "Ironclad|Hard|ATTACKER|CLASSIC": {
+    "actions": {
+      "ATTACK": 40,
+      "CHARGE": 37,
+      "GUARD": 15,
+      "SPECIAL": 2,
+      "DODGE": 1
+    },
+    "hits": 5.333333333333333,
+    "win_rate": 0.6666666666666666,
+    "n": 6,
+    "finishes": {
+      "DRAW": 1,
+      "SPIN_OUT": 3,
+      "BURST": 2
+    },
+    "rounds": 15.333333333333334
+  },
+  "Ironclad|Hard|DEFENDER|CLASSIC": {
+    "actions": {
+      "ATTACK": 58,
+      "CHARGE": 96,
+      "GUARD": 65,
+      "DODGE": 12,
+      "SPECIAL": 4
+    },
+    "hits": 8.666666666666666,
+    "win_rate": 1.0,
+    "n": 6,
+    "finishes": {
+      "POINTS": 4,
+      "BURST": 2
+    },
+    "rounds": 38.833333333333336
+  },
+  "Ironclad|Hard|STAMINA|CLASSIC": {
+    "actions": {
+      "ATTACK": 68,
+      "CHARGE": 52,
+      "DODGE": 15,
+      "GUARD": 33,
+      "SPECIAL": 4
+    },
+    "hits": 9.5,
+    "win_rate": 0.8333333333333334,
+    "n": 6,
+    "finishes": {
+      "SPIN_OUT": 2,
+      "BURST": 3,
+      "DRAW": 1
+    },
+    "rounds": 27.833333333333332
+  },
+  "Cyclone|Easy|BALANCED|CLASSIC": {
+    "actions": {
+      "CHARGE": 35,
+      "DODGE": 25,
+      "ATTACK": 31,
+      "GUARD": 20,
+      "SPECIAL": 7
+    },
+    "hits": 6.333333333333333,
+    "win_rate": 0.0,
+    "n": 6,
+    "finishes": {
+      "BURST": 4,
+      "SPIN_OUT": 2
+    },
+    "rounds": 19.0
+  },
+  "Cyclone|Easy|ATTACKER|CLASSIC": {
+    "actions": {
+      "ATTACK": 29,
+      "CHARGE": 28,
+      "GUARD": 18,
+      "DODGE": 14,
+      "SPECIAL": 7
+    },
+    "hits": 6.0,
+    "win_rate": 0.5,
+    "n": 6,
+    "finishes": {
+      "BURST": 5,
+      "SPIN_OUT": 1
+    },
+    "rounds": 15.0
+  },
+  "Cyclone|Easy|DEFENDER|CLASSIC": {
+    "actions": {
+      "CHARGE": 58,
+      "ATTACK": 45,
+      "GUARD": 32,
+      "SPECIAL": 12,
+      "DODGE": 22
+    },
+    "hits": 9.333333333333334,
+    "win_rate": 0.3333333333333333,
+    "n": 6,
+    "finishes": {
+      "BURST": 2,
+      "RING_OUT": 2,
+      "SPIN_OUT": 2
+    },
+    "rounds": 27.5
+  },
+  "Cyclone|Easy|STAMINA|CLASSIC": {
+    "actions": {
+      "CHARGE": 25,
+      "DODGE": 13,
+      "GUARD": 19,
+      "SPECIAL": 16,
+      "ATTACK": 22
+    },
+    "hits": 6.166666666666667,
+    "win_rate": 0.16666666666666666,
+    "n": 6,
+    "finishes": {
+      "SPIN_OUT": 3,
+      "BURST": 3
+    },
+    "rounds": 15.166666666666666
+  },
+  "Cyclone|Medium|BALANCED|CLASSIC": {
+    "actions": {
+      "DODGE": 19,
+      "CHARGE": 40,
+      "ATTACK": 33,
+      "GUARD": 24,
+      "SPECIAL": 9
+    },
+    "hits": 7.0,
+    "win_rate": 0.3333333333333333,
+    "n": 6,
+    "finishes": {
+      "SPIN_OUT": 2,
+      "BURST": 4
+    },
+    "rounds": 20.0
+  },
+  "Cyclone|Medium|ATTACKER|CLASSIC": {
+    "actions": {
+      "ATTACK": 34,
+      "DODGE": 13,
+      "CHARGE": 28,
+      "GUARD": 14,
+      "SPECIAL": 6
+    },
+    "hits": 6.666666666666667,
+    "win_rate": 0.6666666666666666,
+    "n": 6,
+    "finishes": {
+      "DRAW": 1,
+      "BURST": 5
+    },
+    "rounds": 14.833333333333334
+  },
+  "Cyclone|Medium|DEFENDER|CLASSIC": {
+    "actions": {
+      "DODGE": 29,
+      "CHARGE": 71,
+      "ATTACK": 49,
+      "GUARD": 38,
+      "SPECIAL": 10
+    },
+    "hits": 9.666666666666666,
+    "win_rate": 0.16666666666666666,
+    "n": 6,
+    "finishes": {
+      "BURST": 2,
+      "POINTS": 1,
+      "SPIN_OUT": 3
+    },
+    "rounds": 32.333333333333336
+  },
+  "Cyclone|Medium|STAMINA|CLASSIC": {
+    "actions": {
+      "CHARGE": 40,
+      "GUARD": 30,
+      "DODGE": 36,
+      "ATTACK": 38,
+      "SPECIAL": 8
+    },
+    "hits": 7.666666666666667,
+    "win_rate": 0.3333333333333333,
+    "n": 6,
+    "finishes": {
+      "BURST": 4,
+      "POINTS": 1,
+      "SPIN_OUT": 1
+    },
+    "rounds": 24.666666666666668
+  },
+  "Cyclone|Hard|BALANCED|CLASSIC": {
+    "actions": {
+      "CHARGE": 48,
+      "ATTACK": 37,
+      "GUARD": 36,
+      "SPECIAL": 7,
+      "DODGE": 22
+    },
+    "hits": 7.166666666666667,
+    "win_rate": 0.16666666666666666,
+    "n": 6,
+    "finishes": {
+      "SPIN_OUT": 3,
+      "BURST": 1,
+      "POINTS": 1,
+      "DRAW": 1
+    },
+    "rounds": 24.666666666666668
+  },
+  "Cyclone|Hard|ATTACKER|CLASSIC": {
+    "actions": {
+      "ATTACK": 31,
+      "GUARD": 32,
+      "CHARGE": 41,
+      "SPECIAL": 3,
+      "DODGE": 27
+    },
+    "hits": 5.666666666666667,
+    "win_rate": 0.3333333333333333,
+    "n": 6,
+    "finishes": {
+      "BURST": 5,
+      "SPIN_OUT": 1
+    },
+    "rounds": 21.333333333333332
+  },
+  "Cyclone|Hard|DEFENDER|CLASSIC": {
+    "actions": {
+      "ATTACK": 43,
+      "GUARD": 45,
+      "CHARGE": 73,
+      "DODGE": 23,
+      "SPECIAL": 11
+    },
+    "hits": 8.833333333333334,
+    "win_rate": 0.6666666666666666,
+    "n": 6,
+    "finishes": {
+      "BURST": 3,
+      "POINTS": 1,
+      "SPIN_OUT": 2
+    },
+    "rounds": 31.833333333333332
+  },
+  "Cyclone|Hard|STAMINA|CLASSIC": {
+    "actions": {
+      "ATTACK": 24,
+      "GUARD": 29,
+      "DODGE": 28,
+      "CHARGE": 34,
+      "SPECIAL": 12
+    },
+    "hits": 5.666666666666667,
+    "win_rate": 0.16666666666666666,
+    "n": 6,
+    "finishes": {
+      "SPIN_OUT": 1,
+      "BURST": 5
+    },
+    "rounds": 20.333333333333332
+  },
+  "Ironclad|Medium|BALANCED|ICE": {
+    "actions": {
+      "CHARGE": 56,
+      "GUARD": 36,
+      "ATTACK": 45,
+      "DODGE": 9
+    },
+    "hits": 6.166666666666667,
+    "win_rate": 0.3333333333333333,
+    "n": 6,
+    "finishes": {
+      "BURST": 3,
+      "SPIN_OUT": 2,
+      "RING_OUT": 1
+    },
+    "rounds": 23.333333333333332
+  },
+  "Ironclad|Medium|BALANCED|STEEP": {
+    "actions": {
+      "ATTACK": 52,
+      "CHARGE": 44,
+      "GUARD": 26,
+      "SPECIAL": 1,
+      "DODGE": 1
+    },
+    "hits": 7.166666666666667,
+    "win_rate": 0.8333333333333334,
+    "n": 6,
+    "finishes": {
+      "SPIN_OUT": 4,
+      "BURST": 1,
+      "DRAW": 1
+    },
+    "rounds": 20.166666666666668
+  },
+  "Cyclone|Medium|BALANCED|ICE": {
+    "actions": {
+      "DODGE": 19,
+      "CHARGE": 45,
+      "GUARD": 24,
+      "ATTACK": 30,
+      "SPECIAL": 12
+    },
+    "hits": 6.333333333333333,
+    "win_rate": 0.16666666666666666,
+    "n": 6,
+    "finishes": {
+      "BURST": 2,
+      "SPIN_OUT": 4
+    },
+    "rounds": 20.666666666666668
+  },
+  "Cyclone|Medium|BALANCED|STEEP": {
+    "actions": {
+      "CHARGE": 29,
+      "GUARD": 20,
+      "ATTACK": 37,
+      "DODGE": 14,
+      "SPECIAL": 7
+    },
+    "hits": 7.166666666666667,
+    "win_rate": 0.5,
+    "n": 6,
+    "finishes": {
+      "SPIN_OUT": 3,
+      "BURST": 3
+    },
+    "rounds": 17.166666666666668
+  }
+}

@@ -78,6 +78,10 @@ def spectator_tips(b: Battle, limit: int = 3) -> List[Tip]:
         sev = 2 if label == "HIGH" else 0
         extra = " (DANGER HIGH: near the rim)" if label == "HIGH" else ""
         out.append((act.value, f"{name} {verb}{extra}.", sev))
+    nxt = (b.pending.get(1), b.pending.get(2))
+    if nxt[0] is not None and nxt[1] is not None:
+        names = {Action.CHARGE: "charges", Action.ATTACK: "attacks", Action.GUARD: "guards", Action.DODGE: "dodges", Action.SPECIAL: "uses Special"}
+        out.append(("", f"Next round: P1 {names[nxt[0]]}, P2 {names[nxt[1]]}.", 0))
     out.append(("", "Each AI picks one action every 3 seconds and then steers its blade freely.", 0))
     return sorted(out, key=lambda t: -t[2])[:limit]
 

@@ -420,11 +420,20 @@ class BattleScene(Scene):
             A.text(screen, "NEXT", 13, A.MUTED, (rect.x + 170, y), anchor="midleft", weight="bold")
             A.draw_icon(screen, nxt.value, (rect.x + 214, y), 18, ACTION_COLORS[nxt])
             A.text(screen, LABEL[nxt].upper(), 18, A.GOLD, (rect.x + 230, y), anchor="midleft", weight="bold")
+        elif not side.is_human:
+            nxt = b.pending.get(player)
+            A.text(screen, "NEXT", 13, A.MUTED, (rect.x + 170, y), anchor="midleft", weight="bold")
+            if nxt is None:  # the AI is still searching
+                dots = "." * (1 + int(pygame.time.get_ticks() / 350) % 3)
+                A.text(screen, "thinking" + dots, 16, A.MUTED, (rect.x + 214, y), anchor="midleft", weight="semi")
+            else:
+                A.draw_icon(screen, nxt.value, (rect.x + 214, y), 18, ACTION_COLORS[nxt])
+                A.text(screen, LABEL[nxt].upper(), 18, A.GOLD, (rect.x + 230, y), anchor="midleft", weight="bold")
         y += 26
         # AI decision panel
         info = b.last_info.get(player) or {}
         if not side.is_human and info:
-            A.text(screen, "AI DECISION", 13, A.MUTED, (rect.x + 16, y), anchor="midleft", weight="bold")
+            A.text(screen, "AI DECISION  ·  taller bar = preferred, gold = its pick", 12, A.MUTED, (rect.x + 16, y), anchor="midleft", weight="bold")
             if "scores" in info:
                 vals = info["scores"]
                 meta = f"minimax d{info.get('depth', 0)} · {info.get('nodes', 0)} nodes · {info.get('ms', 0):.0f} ms"
@@ -445,8 +454,10 @@ class BattleScene(Scene):
                     h = int(full.h * f)
                     chosen = a is info.get("action")
                     pygame.draw.rect(screen, A.GOLD if chosen else A.shade(ACTION_COLORS[a], 0.7), (bx, full.bottom - h, bw, h), border_radius=4)
-                A.draw_icon(screen, a.value, (bx + bw / 2, y + 62), 12, A.MUTED)
-            A.text(screen, meta, 12, A.DIM, (rect.x + 16, y + 80), anchor="midleft")
+                chosen = a is info.get("action")
+                A.draw_icon(screen, a.value, (bx + bw / 2, y + 58), 12, A.GOLD if chosen else ACTION_COLORS[a])
+                A.text(screen, a.value, 10, A.GOLD if chosen else A.MUTED, (bx + bw / 2, y + 72), weight="bold")
+            A.text(screen, meta, 12, A.DIM, (rect.x + 16, y + 88), anchor="midleft")
         elif side.is_human:
             A.text(screen, "Pick your next move any time;", 13, A.MUTED, (rect.x + 16, y + 8), anchor="midleft")
             A.text(screen, "it locks in when the gold bar fills.", 13, A.MUTED, (rect.x + 16, y + 26), anchor="midleft")
@@ -490,7 +501,7 @@ class BattleScene(Scene):
             ("BURST GUARD", "Stability: damage the blade can take. Hits lower it, Guard restores it. At 0 it BURSTS and loses.", [(x_l + 134, 176)]),
             ("SPECIAL", "Special Spin: 35 spin, 3 s cooldown, 10 damage to yourself. READY means it can be used.", [(x_l + 34, 220)]),
             ("DANGER", "Fuzzy-logic risk, 0 to 100: LOW, MED or HIGH. High = near the rim and low on spin.", [(x_l + 231, 220)]),
-            ("NOW / NEXT", "NOW: the action being played this round. NEXT: your queued action, locked in when the bar fills.", [(x_l + 62, 250)]),
+            ("NOW / NEXT", "NOW: the action being played this round. NEXT: your queued action, or the action an AI has already decided for the next round.", [(x_l + 62, 250)]),
             ("AI DECISION", "How much the AI likes each action; gold is its pick. Below: search depth and positions checked "
                             "(minimax) or simulations (MCTS), and thinking time in ms.", [(x_ai + 134, 306)]),
             ("ROUND · TIMER", "40 rounds of 3 s = a 2 minute match. The gold bar fills once per round, then both blades lock in actions.", [(500, 56)]),
@@ -525,7 +536,7 @@ class BattleScene(Scene):
         if not PROFILE.settings.coach:
             return
         x = A.W - 316
-        r = pygame.Rect(x, 392, 300, 148)
+        r = pygame.Rect(x, 392, 300, 138)
         ui.panel(screen, r, accent=A.CYAN, alpha=210, title="Coach")
         hv = coach.hover_help(self.hover_action)
         y = r.y + 38
@@ -549,15 +560,20 @@ class BattleScene(Scene):
                 for j, line in enumerate(lines):
                     A.text(screen, line, 14, A.WHITE if sev else A.MUTED, (r.x + 48, y + j * 17), anchor="topleft", weight="semi" if sev else "regular")
                 y += len(lines) * 17 + 9
-        c = pygame.Rect(x, 548, 300, 88)
+        c = pygame.Rect(x, 538, 300, 98)
         ui.panel(screen, c, accent=A.LINE, alpha=200, title="Counters")
-        cells = [("ATTACK", "beats", ["CHARGE"]), ("GUARD", "beats", ["ATTACK"]), ("SPECIAL", "breaks", ["GUARD"]), ("DODGE", "avoids", ["ATTACK", "SPECIAL"])]
-        for i, (a_, verb, bs) in enumerate(cells):
-            cx, cy = c.x + 22 + (i % 2) * 146, c.y + 46 + (i // 2) * 28
-            A.draw_icon(screen, a_, (cx, cy), 20, ACTION_COLORS[Action(a_)])
-            A.text(screen, verb, 13, A.MUTED, (cx + 16, cy), anchor="midleft")
-            for k, b_ in enumerate(bs):
-                A.draw_icon(screen, b_, (cx + 64 + k * 24, cy), 20, ACTION_COLORS[Action(b_)])
+        rows = [("ATTACK", "beats", ["CHARGE"]), ("GUARD", "beats", ["ATTACK"]),
+                ("SPECIAL", "breaks", ["GUARD"]), ("DODGE", "avoids", ["ATTACK", "SPECIAL"])]
+        for i, (a_, verb, bs) in enumerate(rows):
+            cy = c.y + 41 + i * 15
+            A.draw_icon(screen, a_, (c.x + 20, cy), 15, ACTION_COLORS[Action(a_)])
+            A.text(screen, a_, 12, ACTION_COLORS[Action(a_)], (c.x + 34, cy), anchor="midleft", weight="bold")
+            A.text(screen, verb, 12, A.MUTED, (c.x + 100, cy), anchor="midleft")
+            x0 = c.x + 142
+            for b_ in bs:
+                A.draw_icon(screen, b_, (x0 + 8, cy), 15, ACTION_COLORS[Action(b_)])
+                x0 += 20
+            A.text(screen, " / ".join(bs), 12, A.WHITE, (x0 + 2, cy), anchor="midleft", weight="bold")
 
     def _draw_guide_button(self, screen: pygame.Surface) -> None:
         r = self.GUIDE_BTN

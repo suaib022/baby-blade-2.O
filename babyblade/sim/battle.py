@@ -116,6 +116,9 @@ class Battle:
         self._acc = 0.0
         self._started = False
         self.last_info: Dict[int, dict] = {1: {}, 2: {}}
+        # The action each AI has already decided for the NEXT round (known before the boundary).
+        self.pending: Dict[int, Optional[Action]] = {1: None, 2: None}
+        self._pending_done: Dict[int, bool] = {1: False, 2: False}
         self._launch(launch)
 
     # ---- setup ------------------------------------------------------------------------------
@@ -198,6 +201,8 @@ class Battle:
 
     def _begin_thinking(self) -> None:
         self._thinking = True
+        self.pending = {1: None, 2: None}
+        self._pending_done = {1: False, 2: False}
         if not self.controllers:
             return
         snap = self.snapshot()
@@ -211,7 +216,12 @@ class Battle:
             return
         for player, ctl in ((1, self.controllers[0]), (2, self.controllers[1])):
             t0 = _time.perf_counter()
-            ctl.step(budget)
+            if self._pending_done.get(player):
+                continue
+            if ctl.step(budget):
+                self._pending_done[player] = True
+                if not getattr(ctl, "is_human", False):
+                    self.pending[player] = ctl.choice()
             (self.t1 if player == 1 else self.t2).stats.think_seconds += _time.perf_counter() - t0
 
     def _choose(self, player: int) -> Action:
@@ -238,6 +248,8 @@ class Battle:
         a1 = self._choose(1)
         a2 = self._choose(2)
         self._thinking = False
+        self.pending = {1: None, 2: None}
+        self._pending_done = {1: False, 2: False}
         self.round_t = 0.0
         ice = self.stadium is StadiumType.ICE
         mult = C.ICE_MOVE_MULT if ice else 1.0
