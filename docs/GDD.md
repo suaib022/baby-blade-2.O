@@ -88,7 +88,8 @@ Both agents decide at every round boundary using the same **abstract round model
 ## 5. Modes
 * **Human vs AI** — choose Ironclad or Cyclone and Easy / Medium / Hard.
 * **AI vs AI** (mandatory) — start/pause, resume, restart, speed 1x/2x/4x, single step, swap sides.
-* **Tournament** — N headless matches; wins, losses, draws, win %, average duration, average
+* **Championship** — the player and seven AIs in a knockout bracket (quarter-final, semi-final, best-of-three final) on three stadiums.
+* **AI Benchmark** — N headless AI matches; wins, losses, draws, win %, average duration, average
   decision time and finish types; export JSON/CSV on desktop.
 * **Customize** — Blade (shape), Ratchet (claw count), Bit (tip) and colour are cosmetic; the
   archetype sets the rules and its real numbers are shown.
@@ -97,7 +98,7 @@ Both agents decide at every round boundary using the same **abstract round model
 Look follows the deck: dark navy stage, neon blue (P1) and red (P2), Oswald headings.
 Stadium: rounded board, lit bowl floor, LED rim, danger zone outside the live boundary.
 Tops: layered sprites rotated from a cache, fixed specular highlight, spin-blur that grows with
-energy, glow, motion trails, wobble when stability is low. Feedback: sparks, shockwaves,
+energy, glow, motion trails, wobble when stability is low. Teaching aids: Coach panel, counters chart, hover details, NOW/NEXT action for every blade, Screen Guide (H). Feedback: sparks, shockwaves,
 hit-stop, screen shake, camera zoom, slow-motion finish, finish banners, synthesized audio
 (spin hum pitched by energy, clashes, launch rip, burst, crowd).
 

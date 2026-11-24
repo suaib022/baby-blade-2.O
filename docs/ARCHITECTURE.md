@@ -8,7 +8,8 @@ main.py ── App (game/app.py): window, scene stack, 60 fps loop, async loop f
             ├─ scenes/battle     launch → fight → finish; HUD, controls, pause
             │     └─ ArenaView (game/arena_view.py): draws a Battle, turns its events into
             │        sparks, shockwaves, hit-stop, banners and sound
-            ├─ scenes/results, tournament, customize, howto, settings
+            ├─ scenes/results, championship, tournament (AI Benchmark), customize, howto, settings
+            ├─ coach.py   plain-language tips for the Coach panel
             │
             └─ sim/battle.py  Battle: 120 Hz physics + 3 s rounds + rules + finishes
                   ├─ controllers: ai/agents.py (Ironclad, Cyclone, Human)

@@ -82,7 +82,7 @@ class ResultsScene(Scene):
         else:
             head = "NO WINNER"
         A.text(screen, head, 30, A.WHITE, (A.W / 2, 146), weight="bold")
-        A.text(screen, f"Finish: {REASON_TEXT.get(b.finish or 'POINTS', '')}  ·  {b.round} rounds  ·  {b.time:.1f}s", 18, A.MUTED, (A.W / 2, 182))
+        A.text(screen, f"Finish: {REASON_TEXT.get(b.finish or 'POINTS', '')}  ·  {b.round} round{'s' if b.round != 1 else ''}  ·  {b.time:.1f}s", 18, A.MUTED, (A.W / 2, 182))
         for player, x in ((1, 90), (2, A.W - 90 - 500)):
             self._card(screen, player, pygame.Rect(x, 220, 500, 380))
         self.menu.draw(screen)

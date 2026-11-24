@@ -79,7 +79,7 @@ def finish_hook(app, scene, i):
 snap("08_finish_banner", BattleScene(human_match()), 400, finish_hook)
 _setup = human_match()
 _battle, _human = _setup.build((0.8, 0.8))
-_human.queued = Action.ATTACK
+_human.queued = Action.GUARD
 _battle.run_to_end()
 snap("09_results", ResultsScene(_setup, _battle, ("YOU", "AI")), 30)
 snap("10_championship", ChampionshipScene(), 20)

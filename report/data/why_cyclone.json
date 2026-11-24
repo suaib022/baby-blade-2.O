@@ -1,0 +1,47 @@
+{
+  "A  Ironclad+Defender  vs  Cyclone+Attacker   (your setup)": {
+    "n": 30,
+    "ironclad": 28,
+    "cyclone": 2,
+    "draws": 0,
+    "finishes": {
+      "BURST": 18,
+      "POINTS": 6,
+      "SPIN_OUT": 6
+    }
+  },
+  "B  Ironclad+Attacker  vs  Cyclone+Defender   (blades swapped)": {
+    "n": 30,
+    "ironclad": 19,
+    "cyclone": 9,
+    "draws": 2,
+    "finishes": {
+      "BURST": 15,
+      "SPIN_OUT": 11,
+      "DRAW": 2,
+      "POINTS": 2
+    }
+  },
+  "C  Ironclad+Attacker  vs  Cyclone+Attacker   (same blade)": {
+    "n": 30,
+    "ironclad": 17,
+    "cyclone": 12,
+    "draws": 1,
+    "finishes": {
+      "BURST": 25,
+      "DRAW": 1,
+      "SPIN_OUT": 4
+    }
+  },
+  "D  Ironclad+Defender  vs  Cyclone+Defender   (same blade)": {
+    "n": 30,
+    "ironclad": 25,
+    "cyclone": 5,
+    "draws": 0,
+    "finishes": {
+      "POINTS": 28,
+      "BURST": 1,
+      "SPIN_OUT": 1
+    }
+  }
+}
